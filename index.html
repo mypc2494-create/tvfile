@@ -18,6 +18,14 @@
 <body><canvas id="game"></canvas>
 
 <script>
+  setInterval(() => {
+  let key = localStorage.getItem("control");
+  if (key) {
+    keys[key] = true;
+    setTimeout(() => keys[key] = false, 100);
+    localStorage.removeItem("control");
+  }
+}, 100);
 const canvas = document.getElementById("game");
 const ctx = canvas.getContext("2d");
 
