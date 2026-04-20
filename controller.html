@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Controller</title>
+  <style>
+    body {
+      text-align: center;
+      background: black;
+      color: white;
+      font-family: Arial;
+    }
+    button {
+      width: 80px;
+      height: 80px;
+      font-size: 20px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>TV Controller 🎮</h2>
+
+<button onclick="press('ArrowUp')">⬆️</button><br>
+<button onclick="press('ArrowLeft')">⬅️</button>
+<button onclick="press('ArrowDown')">⬇️</button>
+<button onclick="press('ArrowRight')">➡️</button>
+
+<script>
+function press(key) {
+  localStorage.setItem("control", key);
+}
+</script>
+
+</body>
+</html>
